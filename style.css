@@ -1,0 +1,176 @@
+body {
+    background-color: #B4CFA4; /* main color */
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 60px; /* dagdag para hindi matakpan ng fixed header */
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #62866C;
+    position: fixed;   /* para laging nasa taas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /* fixed height */
+    z-index: 1000; /* para lagi sa ibabaw */
+}
+
+.name {
+    margin-left: 20px;
+}
+
+.nav-con {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 20px;         /* horizontal spacing */
+    display: flex;           /* para text ay center vertically */
+    align-items: center;
+    height: 100%;            /* match sa header height */
+}
+
+.nav a:hover {
+    background-color: #4a6b53; 
+    transition: background-color 0.3s ease; /* smooth effect */
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 20px;
+    color: #4a6b53;
+}
+
+.profile {
+    width: 25%;
+    text-align: center;
+}
+
+.profile img {
+    width: 100%;
+    border-radius: 15px; /* slight rounded corners */
+    margin-bottom: 15px;
+}
+
+.profile-info h2 {
+    margin: 10px 0 5px;
+}
+
+.details {
+    width: 70%;
+}
+
+.details h2 {
+    color: #62866C;
+    margin-top: 20px;
+    border-bottom: 2px solid #62866C;
+    padding-bottom: 5px;
+}
+
+.social-links {
+    color: #4a6b53;
+    text-decoration: none;
+    -webkit-text-stroke: 1px;
+}
+.social-links:hover {
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #62866C; /* same shade as header para consistent */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 3px solid #4a6b53; /* subtle line on top */
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+footer em {
+    font-size: 12px;
+    color: #e0e0e0; /* lighter color for disclaimer text */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile, .details {
+        width: 100%;
+    }
+
+    .profile img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto; /* auto adjust */
+        padding: 10px 0;
+    }
+
+    .name {
+        margin: 5px 0;
+        font-size: 18px;
+    }
+
+    .nav-con {
+        justify-content: center;
+        flex-wrap: wrap; /* para hindi mag-overflow */
+    }
+
+    .nav a {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile, .details {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav a {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .profile img {
+        max-width: 200px;
+    }
+
+    .details h2 {
+        font-size: 16px;
+    }
+}
