@@ -1,6 +1,7 @@
 body {
     background-color: #B4CFA4; /* main color */
     margin: 0;
+    
     font-family: 'Courier New', Courier, monospace;
     padding-top: 60px; /* dagdag para hindi matakpan ng fixed header */
 }
@@ -12,6 +13,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+      border-bottom: 2px solid #4a6b53;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -53,7 +55,7 @@ header {
     align-items: flex-start;
     gap: 40px;
     margin: 20px;
-    color: #4a6b53;
+    color: #1e2136;
 }
 
 .profile {
@@ -76,7 +78,7 @@ header {
 }
 
 .details h2 {
-    color: #62866C;
+   color: #1e2136;
     margin-top: 20px;
     border-bottom: 2px solid #62866C;
     padding-bottom: 5px;
@@ -85,7 +87,6 @@ header {
 .social-links {
     color: #4a6b53;
     text-decoration: none;
-    -webkit-text-stroke: 1px;
 }
 .social-links:hover {
     text-decoration: underline;
@@ -96,13 +97,13 @@ footer {
     background-color: #62866C; /* same shade as header para consistent */
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     margin-top: 30px;
-    border-top: 3px solid #4a6b53; /* subtle line on top */
+    border-top: 2px solid #4a6b53; /* subtle line on top */
 }
 
 footer p {
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 14px;
     line-height: 1.6;
 }
