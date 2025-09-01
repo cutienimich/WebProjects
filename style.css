@@ -1,177 +1,172 @@
 body {
-    background-color: #B4CFA4; /* main color */
-    margin: 0;
-    
-    font-family: 'Courier New', Courier, monospace;
-    padding-top: 60px; /* dagdag para hindi matakpan ng fixed header */
+  background-color: #ECEEDF;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  padding-top: 60px; /* for fixed header */
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header {
-    background-color: #62866C;
-    position: fixed;   /* para laging nasa taas */
-    top: 0;
-    left: 0;
-    width: 100%;
-      border-bottom: 2px solid #4a6b53;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px; /* fixed height */
-    z-index: 1000; /* para lagi sa ibabaw */
+  background-color:#333;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  border-bottom: 2px solid #4a6b53;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 1rem;
+  z-index: 1000;
 }
 
-.name {
-    margin-left: 20px;
-}
+.name { font-size: 1.2rem; }
 
 .nav-con {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0 20px;         /* horizontal spacing */
-    display: flex;           /* para text ay center vertically */
-    align-items: center;
-    height: 100%;            /* match sa header height */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 15px;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .nav a:hover {
-    background-color: #4a6b53; 
-    transition: background-color 0.3s ease; /* smooth effect */
+  background-color: #ECEEDF; 
+  transition: background-color 0.3s ease;
+  color:#333
 }
 
-/* ===== CONTAINER ===== */
-.container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 40px;
-    margin: 20px;
-    color: #1e2136;
-}
-
-.profile {
-    width: 25%;
-    text-align: center;
+/* PROFILE / HERO SECTION */
+.profile-con {
+  background-color: #ECEEDF;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh; /* take up full screen height */
 }
 
 .profile img {
-    width: 100%;
-    border-radius: 15px; /* slight rounded corners */
-    margin-bottom: 15px;
+  width: 300px;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.profile-info {
+  flex: 1 1 300px;
+  font-size: 1.3rem;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
 }
 
 .profile-info h2 {
-    margin: 10px 0 5px;
+  font-size: 2rem;
+  margin: 0;
 }
 
-.details {
-    width: 70%;
+.button {
+  border: 2px solid black;
+  padding: 10px 20px;
+  border-radius: 30px;
 }
 
-.details h2 {
-   color: #1e2136;
-    margin-top: 20px;
-    border-bottom: 2px solid #62866C;
-    padding-bottom: 5px;
+.button:hover, .button:hover a{
+    background-color: #333;
+    color: #ECEEDF;
+
 }
 
+.button a {
+  text-decoration: none;
+  color: #0a0f1e;
+  font-weight: bold;
+}
+/* SECTIONS */
+section {
+  padding: 2rem;
+  background: #fff;
+  color: #333;
+  margin: 2rem auto;            /* space between sections */
+  max-width: 900px;             /* keeps content centered */
+  border-radius: 12px;          /* rounded corners */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+section h3 {
+  margin-bottom: 1rem;
+  border-left: 5px solid #00bcd4;
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* Make text spacing comfortable */
+section p, 
+section ul {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Contact links */
 .social-links {
-    color: #4a6b53;
-    text-decoration: none;
+  color: #00bcd4;
+  font-weight: bold;
+  text-decoration: none;
 }
 .social-links:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* ===== FOOTER ===== */
+
+/* FOOTER */
 footer {
-    background-color: #62866C; /* same shade as header para consistent */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 30px;
-    border-top: 2px solid #4a6b53; /* subtle line on top */
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
 }
 
-footer p {
-    margin: 5px 0;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-footer em {
-    font-size: 12px;
-    color: #e0e0e0; /* lighter color for disclaimer text */
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile, .details {
-        width: 100%;
-    }
-
-    .profile img {
-        max-width: 300px;
-    }
-}
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        height: auto; /* auto adjust */
-        padding: 10px 0;
-    }
+  .nav-con {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #333;
+    width: 200px;
+    display: none;
+  }
+  .nav-con.show { display: flex; }
 
-    .name {
-        margin: 5px 0;
-        font-size: 18px;
-    }
+  .nav a { padding: 15px; }
 
-    .nav-con {
-        justify-content: center;
-        flex-wrap: wrap; /* para hindi mag-overflow */
-    }
+  .profile-con {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .nav a {
-        padding: 5px 10px;
-        font-size: 14px;
-    }
-
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile, .details {
-        width: 90%;
-    }
+  .profile-info {
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
-    .nav a {
-        padding: 5px;
-        font-size: 12px;
-    }
-
-    .profile img {
-        max-width: 200px;
-    }
-
-    .details h2 {
-        font-size: 16px;
-    }
+  .name { font-size: 1rem; }
+  .profile img { width: 180px; }
+  .profile-info { font-size: 1rem; }
 }
